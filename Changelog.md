@@ -3,15 +3,15 @@
 *    Changelog
 
 ## [Unreleased]
-### Change
+### Change:
 - the quickLinks array and function GetQuickLinksArray handles the array objects more as a proper array instead of a psuedo array now.
-### Added
+### Added:
 - added checks to see if the quicklinks array is not empty before taking some actions
-### Added
+### Added:
 - System tray Notifications, and config.ini key to turn them on|off
-### Note
+### Note:
 - Only known bug/oddity is with the tweakwindow function, it can fail after launch if this happens increase loadDelay to loadDelay=3500 or higher
-### Note 
+### Note:
 - look for more typos/inconsistancies/oddities/bugs
 
 ## [1.0.2] - 2021-9-10
