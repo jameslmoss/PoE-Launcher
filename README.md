@@ -1,5 +1,6 @@
-# PoE Launcher
-* Version: 1.0.2
+#  PoE Launcher
+*  Version: 1.0.2
+*  [Download](https://github.com/jameslmoss/PoE-Launcher/releases "Download") the latest version
 
 Launcher was born because I got tired of manually setting the process priority of Path of Exile, so I descided to automate that task with a script.
 Launcher will automate some startup tasks that can be configured & controlled via the system tray icon (see below). 
