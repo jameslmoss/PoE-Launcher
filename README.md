@@ -22,6 +22,7 @@ If a menu item is checked/bold that means it is on/active other wise it is off/d
 
 Other settings exist and are detailed breafly in config.ini, edit carefully
 
+![Alt text](https://i.imgur.com/i1xarZw.png "TrayIcon Menu, QuickLinks")
 
 ## [Unreleased]
 ### Change: 
