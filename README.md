@@ -22,13 +22,13 @@ If a menu item is checked/bold that means it is on/active other wise it is off/d
 
 Other settings exist and are detailed breafly in config.ini, edit carefully
 
-# PoE Launcher Menu, QuickLinks
+## PoE Launcher Menu, QuickLinks
 ![Alt text](https://i.imgur.com/i1xarZw.png "TrayIcon Menu, QuickLinks")
 
-# PoE Launcher Menu, Set Process Level
+## PoE Launcher Menu, Set Process Level
 ![Alt text](https://i.imgur.com/SZvFB0S.png "PoE Launcher Menu, Set Process Level")
 
-# PoE Launcher Menu, Settings
+## PoE Launcher Menu, Settings
 ![Alt text](https://i.imgur.com/LGMXBss.png "PoE Launcher Menu, Settings")
 
 ## [Unreleased]
