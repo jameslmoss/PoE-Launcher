@@ -1,0 +1,1 @@
+Add shortcuts here that you want to load into the QuickLinks Menu
