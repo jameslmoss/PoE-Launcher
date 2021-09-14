@@ -1,6 +1,6 @@
 # PoE Launcher
-# Version: 1.0.2
-# Changelog
+*   Version: 1.0.2
+*    Changelog
 
 ## [Unreleased]
 ### Change
