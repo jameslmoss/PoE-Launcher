@@ -7,7 +7,7 @@ Launcher will automate some startup tasks that can be configured & controlled vi
 
 Menu Functionality
 - Click for a popup that will ask to close the launched program windows
-- CLick to Tweak the Window Resolution (Hotkey: F10)
+- Click to Tweak the Window Resolution (Hotkey: F10)
 - QuickLink menu for related shortcut/tools
     - You can add *.lnk, *url, *.exe files into the Quicklinks folder
     - If the Quicklinks folder is empty it won't be included in the menu's.
