@@ -2,7 +2,7 @@
 *  Version: 1.0.2
 *  [Download](https://github.com/jameslmoss/PoE-Launcher/releases "Download") the latest version
 
-PoE Launcher was born because I got tired of manually setting the process priority of Path of Exile to Above Normal, so I descided to automate that task with a script. PoE Launcher can automate launching, closing and tweaking the client window. It also can load links to files from a QuickLinks folder for easy access to often used tools. The code is mostly not tied to just 'path of exile' so if you'd like to try it for other games that should work fine, I would just use other icons and unique program name/title. To try it copy the folder/files and edit config.ini. You'll need to edit the paths and will require a program like [**winspy**](http://www.catch22.net/software/winspy) to help you find find the **windowTitle** and **windowClass** values.
+PoE Launcher was born because I got tired of manually setting the process priority of Path of Exile to Above Normal, so I descided to automate that task with a script. PoE Launcher can automate launching, closing and tweaking the client window. It also can load links to files from a QuickLinks folder for easy access to often used tools. The code is mostly not tied to just 'path of exile' so if you'd like to try it for other games that should work fine. I would just use other icons and a unique program name/title. To try it copy the folder/files replace the icons as needed, and edit config.ini. You'll need to edit the paths and will require a program like [**winspy**](http://www.catch22.net/software/winspy) to help you find find the **windowTitle** and **windowClass** values.
 
 Menu Functionality
 - Click for a popup that will ask to close the launched program windows
