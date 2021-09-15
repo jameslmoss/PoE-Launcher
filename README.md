@@ -9,7 +9,7 @@ Menu Functionality
 - Click to Tweak the Window Resolution (Hotkey: F10)
 - QuickLink menu for related shortcut/tools
     - You can add *.lnk, *url, *.exe files into the Quicklinks folder
-    - If the Quicklinks folder is empty it won't be included in the menu's.
+    - If the Quicklinks folder is empty or doesn't exist it won't be included in the menu's.
 - Set Process Level: AboveNormal, Normal, BelowNormal
 
 Settings Menu Options: 
