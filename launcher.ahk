@@ -13,9 +13,10 @@ SetWorkingDir, %A_ScriptDir%
 global INI_FILE := "config.ini"
 
 ; Default settings
-; Abbreviated Title of the app being launched
+; Show o rhide notifications
 global notifyShow := 0
 IniRead, notifyShow, %INI_FILE%, Defaults, notifyShow, "PoE"	
+; Abbreviated Title of the app being launched
 global launcherTitle := "PoE"
 IniRead, launcherTitle, %INI_FILE%, Defaults, launcherTitle, "PoE"
 ; Limit the number of times the process can run
