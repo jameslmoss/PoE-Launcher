@@ -22,7 +22,7 @@ By default everything is turned off, so you need to edit the config.ini or run t
 If you click on a menu item, it will trigger the action and save any potential settings 
 If a menu item is checked/bold that means it is on/active other wise it is off/disabled.
 
-Other settings exist and are detailed breafly in config.ini, edit carefully
+Other settings exist and are detailed briefly in config.ini, edit carefully
 
 The code is mostly not tied to just 'path of exile' so if you'd like to try it for other games that should work fine. I would just use other icons and a unique program name/title. To try it copy the folder/files replace the icons as needed, and edit config.ini. You'll need to edit the paths and will require a program like [**winspy**](http://www.catch22.net/software/winspy) to help you find find the **windowTitle** and **windowClass** values.
 
