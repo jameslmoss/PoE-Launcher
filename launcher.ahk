@@ -91,7 +91,7 @@ if(hasQuickLinks == 1){
 	; Quicklinks Array
 	global quickLinks := Array()
 	; Fill the QuickLinks Array
-	global quickLinksCount := GetQuickLinksArray(quickLinks,quicklinkDir,"*.exe,*.lnk,*.url")
+	global quickLinksCount := GetQuickLinksArray(quickLinks,quicklinkDir,"*.exe,*.lnk,*.ahk,*.url")
 	if(quickLinks.Count() >= 1) {
 		tmpFileOut := ""	
 		tmpFileDir := ""
@@ -646,7 +646,7 @@ GetProcessCount(hWnd) {
 	Return Result
 }
 
-GetQuickLinksArray(ArrayName,Dir,Ext="*.exe,*.lnk,*.url") {
+GetQuickLinksArray(ArrayName,Dir,Ext="*.exe,*.lnk,*.ahk,*.url") {
 	ClearArray(ArrayName)
 	Loop, Parse, Ext, % ","
 	{
