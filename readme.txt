@@ -25,6 +25,14 @@ If you click on a menu item, it will trigger the action and save any potential s
 If a menu item is checked/bold that means it is on/active other wise it is off/disabled.
 
 Other settings exist and are detailed briefly in config.ini, edit carefully
+- launcherTitle=PoE
+    - the text shown of what is being launched "**Launch PoE**" for example.
+- processMax=1
+    - is the number of client processes allowed, default is 1 but this can be any value.
+        - Path of Exile allows 2 max client processes
+- loadDelay=3500
+    - is the delay after runing the client before attempting to do other actions such as "TweakWindow"
+        - if TweakWindow on start is not working properly adjust this value (usually increase it).
 
 The code is mostly not tied to just 'path of exile' so if you'd like to try it for other games that should work fine. I would just use other icons and a unique program name/title. 
 To try it copy the folder/files replace the icons as needed, and edit config.ini. 
