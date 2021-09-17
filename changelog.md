@@ -1,11 +1,10 @@
-# PoE Launcher
-*   Version: 1.0.2
-    *   Changelog
 ### Notes:
 - Only known bug/oddity is with the tweakwindow function, it can fail after launch if this happens increase loadDelay to loadDelay=3500 or higher
 - look for more typos/inconsistancies/oddities/bugs
 
 ## [Unreleased]
+
+## [1.0.3] - 2021-9-17
 ### Change:
 - the quickLinks array and function GetQuickLinksArray handles the array objects more as a proper array instead of a psuedo array now.
 ### Added:
@@ -15,7 +14,7 @@
 ### Changed:
 - Updated to a different version of Notify.ahk from https://github.com/denolfe/AutoHotkey/blob/master/lib/Notify.ahk, it supports preset Styles that are handy
 ### Added:
-- a Use Notifications menu item, under the Settings menu. Toggles the setting on/off and shows a Checkmark if on
+- added Use Notifications menu, under the Settings menu. Clicking toggles the turning notifications on/off and shows a Checkmark if on
 
 ## [1.0.2] - 2021-9-10
 ### Changed: 
