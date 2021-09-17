@@ -7,15 +7,18 @@
 #Persistent
 SetTitleMatchMode, 1
 
+; These includes are loaded from the Lib folder
+#Include <Notify>
+
 SetWorkingDir, %A_ScriptDir%
 
 ; Config File
 global INI_FILE := "config.ini"
 
 ; Default settings
-; Show o rhide notifications
+; Show or hide notifications
 global notifyShow := 0
-IniRead, notifyShow, %INI_FILE%, Defaults, notifyShow, "PoE"	
+IniRead, notifyShow, %INI_FILE%, Defaults, notifyShow, "0"	
 ; Abbreviated Title of the app being launched
 global launcherTitle := "PoE"
 IniRead, launcherTitle, %INI_FILE%, Defaults, launcherTitle, "PoE"
@@ -136,6 +139,7 @@ Menu, Submenu2, Add, AutoLoad on Start, TrayMenu
 Menu, Submenu2, Add, AutoClose on Exit, TrayMenu
 Menu, Submenu2, Add, Set Process Level on Start, TrayMenu
 Menu, Submenu2, Add, Tweak Window on Start, TrayMenu
+Menu, Submenu2, Add, Use Notifications, TrayMenu
 Menu, Submenu2, Add
 ; Create a menu container for the submenu's above
 Menu, Tray, Add, &Settings, :Submenu2
@@ -192,7 +196,7 @@ TrayMenu:
 	
 	If (A_ThisMenuItem="&TweakWindow") {
 		if(notifyShow)
-			Notify(launcherTitle " Launcher","Tweaking: " windowTitle, 1,"TS=12 MS=12","")			
+			Notify(launcherTitle " Launcher","Tweaking: " windowTitle, 1,"Style=Mine TS=12 MS=12")			
 		TweakWindow("ahk_class " windowClass)
 		Return
 	}
@@ -210,11 +214,11 @@ TrayMenu:
 		Menu, Submenu2, ToggleCheck, AutoLoad on Start
 		if(loadOnStart = 1){
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","AutoLoad: Off", 1,"TS=12 MS=12","")		
+				Notify(launcherTitle " Launcher","AutoLoad: Off", 1,"Style=Mine TS=12 MS=12")		
 			loadOnStart := 0
 		} else {
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","AutoLoad: On", 1,"TS=12 MS=12","")					
+				Notify(launcherTitle " Launcher","AutoLoad: On", 1,"Style=Mine TS=12 MS=12")					
 			loadOnStart := 1		
 		}
 		IniWrite, %loadOnStart%, %INI_FILE%, Defaults, loadOnStart
@@ -229,11 +233,11 @@ TrayMenu:
 	  Menu, Submenu2, ToggleCheck, AutoClose on Exit
 		if(closeOnExit = 1){
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","AutoClose: Off", 1,"TS=12 MS=12","")					
+				Notify(launcherTitle " Launcher","AutoClose: Off", 1,"Style=Mine TS=12 MS=12")					
 			closeOnExit := 0
 		} else {
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","AutoClose: On", 1,"TS=12 MS=12","")			
+				Notify(launcherTitle " Launcher","AutoClose: On", 1,"Style=Mine TS=12 MS=12")			
 			closeOnExit := 1	
 		}
 		IniWrite, %closeOnExit%, %INI_FILE%, Defaults, closeOnExit
@@ -247,11 +251,11 @@ TrayMenu:
 	  Menu, Submenu2, ToggleCheck, Set Process Level on Start
 		if(setLevelOnStart = 1){
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","Set Process Level On Start: Off", 1,"TS=12 MS=12","")					
+				Notify(launcherTitle " Launcher","Set Process Level On Start: Off", 1,"Style=Mine TS=12 MS=12")					
 			setLevelOnStart := 0
 		} else {
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","Set Process Level On Start: On", 1,"TS=12 MS=12","")								
+				Notify(launcherTitle " Launcher","Set Process Level On Start: On", 1,"Style=Mine TS=12 MS=12")								
 			setLevelOnStart := 1	
 		}
 		IniWrite, %setLevelOnStart%, %INI_FILE%, Defaults, setLevelOnStart
@@ -265,11 +269,11 @@ TrayMenu:
 	  Menu, Submenu2, ToggleCheck, Tweak Window on Start
 		if(setResOnStart = 1){
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","Tweak Window on Start: Off", 1,"TS=12 MS=12","")			
+				Notify(launcherTitle " Launcher","Tweak Window on Start: Off", 1,"Style=Mine TS=12 MS=12")			
 			setResOnStart := 0
 		} else {
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","Tweak Window on Start: On", 1,"TS=12 MS=12","")						
+				Notify(launcherTitle " Launcher","Tweak Window on Start: On", 1,"Style=Mine TS=12 MS=12")						
 			setResOnStart := 1			
 		}
 		IniWrite, %setResOnStart%, %INI_FILE%, Defaults, setResOnStart 
@@ -277,11 +281,25 @@ TrayMenu:
 			MsgBox, Error writing setResOnStart %setResOnStart%
 		}		 		
 	Return
+	}
+
+	If (A_ThisMenuItem="Use Notifications") {
+	  Menu, Submenu2, ToggleCheck, Use Notifications
+		if(notifyShow = 1){
+			notifyShow := 0
+		} else {
+			notifyShow := 1			
+		}
+		IniWrite, %notifyShow%, %INI_FILE%, Defaults, notifyShow 
+		if (ErrorLevel = 1) {
+			MsgBox, Error writing notifyShow %notifyShow%
+		}		 		
+	Return
 	}	
 
 	If (A_ThisMenuItem="Below Normal") {
 		if(notifyShow)
-			Notify(launcherTitle " Launcher","Set Process Level: Below Normal", 1,"TS=12 MS=12","")					
+			Notify(launcherTitle " Launcher","Set Process Level: Below Normal", 1,"Style=Mine TS=12 MS=12")					
 		defaultLevel := "BelowNormal"
 		ProcessSetCheck(defaultLevel)			
 		IniWrite, %defaultLevel%, %INI_FILE%, Defaults, defaultLevel
@@ -294,7 +312,7 @@ TrayMenu:
 	
 	If (A_ThisMenuItem="Normal") {
 		if(notifyShow)
-			Notify(launcherTitle " Launcher","Set Process Level: Normal", 1,"TS=12 MS=12","")							
+			Notify(launcherTitle " Launcher","Set Process Level: Normal", 1,"Style=Mine TS=12 MS=12")							
 		defaultLevel := "Normal"
 		ProcessSetCheck(defaultLevel)			
 		IniWrite, %defaultLevel%, %INI_FILE%, Defaults, defaultLevel
@@ -307,7 +325,7 @@ TrayMenu:
 	
 	If (A_ThisMenuItem="Above Normal") {
 		if(notifyShow)
-			Notify(launcherTitle " Launcher","Set Process Level: Above Normal", 1,"TS=12 MS=12","")							
+			Notify(launcherTitle " Launcher","Set Process Level: Above Normal", 1,"Style=Mine TS=12 MS=12")							
 		defaultLevel := "AboveNormal"
 		ProcessSetCheck(defaultLevel)			
 		IniWrite, %defaultLevel%, %INI_FILE%, Defaults, defaultLevel
@@ -327,7 +345,7 @@ TrayMenu:
 	If (A_ThisMenuItem="E&xit") {
 		if(closeOnExit = 1) {
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","Bye bye", 1,"TS=12 MS=12","")					
+				Notify(launcherTitle " Launcher","Bye bye", 1,"Style=Mine TS=12 MS=12")					
 			CloseAll("ahk_class " windowClass)
 		}
 	  ExitApp
@@ -360,9 +378,6 @@ F10::
 	}		
 Return
 
-; Lib includes are loaded from the Lib folder
-#Include <Notify>
-
 OnStart:
 	SetTimer, HeartBeat, 500	
 	if(loadOnStart = 1) {
@@ -389,6 +404,12 @@ OnStart:
 	} else {
 		Menu, Submenu2, Uncheck, Tweak Window on Start
 	}
+
+	if(notifyShow = 1) {
+		Menu, Submenu2, Check, Use Notifications
+	} else {
+		Menu, Submenu2, Uncheck, Use Notifications
+	}	
 		
 	ProcessSetCheck(defaultLevel)
 	if(hasQuickLinks == 1){
@@ -458,7 +479,7 @@ Launch(hWnd) {
 		
 		if FileExist(tmpFileFull) {
 			if(notifyShow)
-				Notify(launcherTitle " Launcher","Launching: " windowTitle, 1,"TS=12 MS=12","")			
+				Notify(launcherTitle " Launcher","Launching: " windowTitle, 1,"Style=Mine TS=12 MS=12")			
 			tmpFile := ""
 			tmpWorkingDir := ""
 			tmpFileExt := ""
