@@ -15,7 +15,7 @@
 ### Changed:
 - Updated to a different version of Notify.ahk from https://github.com/denolfe/AutoHotkey/blob/master/lib/Notify.ahk, it supports preset Styles that are handy
 ### Added:
-- Added a Use Notifications menu item, under the Settings menu. Toggles the setting on/off and shows a Checkmark if on
+- a Use Notifications menu item, under the Settings menu. Toggles the setting on/off and shows a Checkmark if on
 
 ## [1.0.2] - 2021-9-10
 ### Changed: 
