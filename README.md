@@ -1,6 +1,6 @@
 #  PoE Launcher
-*  Version: 1.0.2
-*  [Download](https://github.com/jameslmoss/PoE-Launcher/releases "Download") the latest version
+*  Version: 1.0.3
+*  [Download](https://github.com/jameslmoss/PoE-Launcher/releases/latest "Download") the latest version
 
 PoE Launcher was born because I got tired of manually setting the process priority of Path of Exile to Above Normal, so I descided to automate that task with a script. PoE Launcher can automate launching, closing and tweaking the client window. It also can load links to files from a QuickLinks folder for easy access to often used tools. 
 
