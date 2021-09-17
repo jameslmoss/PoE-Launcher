@@ -7,6 +7,7 @@ PoE Launcher can automate launching, closing and tweaking the client window.
 It also can load links to files from a QuickLinks folder for easy access to often used tools. 
 
 Menu Functionality
+- Launch a target Program: Launch PoE
 - Click for a popup that will ask to close the launched program windows
 - Click to Tweak the Window Resolution (Hotkey: F10)
 - QuickLink menu for related shortcut/tools
