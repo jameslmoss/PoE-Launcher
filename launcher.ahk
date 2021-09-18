@@ -1,7 +1,3 @@
-; Title: Launcher.ahk
-; Version: 1.0.2
-; Site: https://www.jameslmoss.com/2021/08/28/poe-launcher/
-; Credits: Autohotkey docs and other's mentioned in the code
 #NoEnv
 #SingleInstance ignore
 #Persistent
