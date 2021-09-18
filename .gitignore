@@ -1,3 +1,5 @@
 # Quicklink folder files
 QuickLinks/*.lnk
 QuickLinks/*.url
+QuickLinks/*.ahk
+QuickLinks/*.exe
