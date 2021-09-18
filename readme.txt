@@ -11,7 +11,7 @@ Menu Functionality
 - Click for a popup that will ask to close the launched program windows
 - Click to Tweak the Window Resolution (Hotkey: F10)
 - QuickLink menu for related shortcut/tools
-    - You can add *.lnk, *url, *.exe files into the Quicklinks folder
+    - You can add *.exe, *.lnk, *.ahk, *url, files into the Quicklinks folder
     - If the Quicklinks folder is empty or doesn't exist it won't be included in the menu's.
 - Set Process Level: AboveNormal, Normal, BelowNormal
 
