@@ -35,9 +35,7 @@ It also can load links to files from a QuickLinks folder for easy access to ofte
     - is the delay after runing the client before attempting to do other actions such as "TweakWindow"
         - if TweakWindow on start is not working properly adjust this value (usually increase it).
 
-By default everything is turned off, so you need to edit the config.ini or run the app once and configure the settings then restart it.
-If you click on a menu item, it will trigger the action and save any potential settings 
-If a menu item is checked/bold that means it is on/active other wise it is off/disabled.
+By default everything is turned off if you run the app and click on a menu item, it will trigger the action and save any potential settings. If a menu item is checked/bold that means it is on/active other wise it is off/disabled.
 
 The code is mostly not tied to just 'path of exile' so if you'd like to try it for other games that should work fine. 
 I would just use other icons and a unique program name/title. 
