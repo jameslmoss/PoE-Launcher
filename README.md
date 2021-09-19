@@ -53,7 +53,7 @@ You'll need to edit the paths and will require a program like [**winspy**](http:
 ![Alt text](https://i.imgur.com/LGMXBss.png "PoE Launcher Menu, Settings")
 
 ## Video walk through
-[![Watch on youtube](https://img.youtube.com/vi/7bmw5uZb50o/maxresdefault.jpg)](https://youtu.be/7bmw5uZb50oA)
+[![Watch on youtube](https://img.youtube.com/vi/7bmw5uZb50o/maxresdefault.jpg)](https://youtu.be/7bmw5uZb50oA){:target="_blank" rel="noopener"}
 
 ## Credits:
 - [Path of Exile](https://www.pathofexile.com)
