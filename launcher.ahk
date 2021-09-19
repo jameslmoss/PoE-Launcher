@@ -733,7 +733,7 @@ TweakWindow(hWnd,tweakLimit=0)
 	; Also seems to disregard accidental Metro interface clicks (Win 8+)
 	;MsgBox, hWnd: %hWnd%
 	if WinExist(hWnd) {
-	  	BlockInput On    	
+		BlockInput On    	
 		WinActivate, %hWnd%
 		WinWaitActive, %hWnd%,,3
 		if (ErrorLevel != 0)
@@ -741,8 +741,8 @@ TweakWindow(hWnd,tweakLimit=0)
 			MsgBox, WinWait timed out.
 			Return
 		}
-	  	BlockInput On		
-	    WinGet Style, Style, %hWnd%
+		BlockInput On		
+		WinGet Style, Style, %hWnd%
 	    ; 0xC40000 = WS_BORDER (0x800000) + WS_DLGFRAME (0x400000) + WS_SIZEBOX aka WS_THICKFRAME (0x040000)
 	    if(Style & 0xC00000) { ; if has WS_CAPTION. Ignore sizebox value.
 	    	WinGetPos, X, Y, Width, Height, %hWnd%
