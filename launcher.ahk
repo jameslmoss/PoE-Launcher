@@ -502,23 +502,23 @@ Launch(hWnd) {
 			if(iCount >= 1) {
 				Loop, %tmpArray%
 				{
-		    	this_id := tmpArray%A_Index%	
-		    	WinGet, pID, PID, ahk_id %this_id%
-			  	Process, Exist, pID
+		    		this_id := tmpArray%A_Index%	
+		    		WinGet, pID, PID, ahk_id %this_id%
+			  		Process, Exist, pID
 					if !ErrorLevel {
-				    if(setResOnStart) {
-						GetWindowConfig()
-						TweakWindow("ahk_id " this_id,1)
-				    }			
-				    if(setLevelOnStart) {
+				    	if(setResOnStart) {
+							GetWindowConfig()
+							TweakWindow("ahk_id " this_id,1)
+				    	}			
+				    	if(setLevelOnStart) {
 							;MsgBox, Set Level - Window Id: %this_id%				    	
 							;WinActivate, ahk_id %this_id%   	
 				    	SetProcessLevel(defaultLevel,"ahk_class " windowClass)
-				    }
-				  }			
+				   		}
+				  	}			
 				}
 			}
-    }
+    	}
 	}
 	Return
 }
@@ -533,13 +533,13 @@ ClosePoE(hWnd) {
 		    this_id := hWndArray%A_Index%	
 		    WinGet, pID, PID, ahk_id %this_id%
 		    Process, Exist, pID
-			  if !ErrorLevel {
-					WinActivate, ahk_id %this_id%
-		  	  MsgBox, 4, , Close this Window?				
-			  	IfMsgBox, Yes			  	
-			  		Process, Close, %pID%
-			  		hWndCount--		  	
-			  }
+			if !ErrorLevel {
+				WinActivate, ahk_id %this_id%
+				MsgBox, 4, , Close this Window?				
+				IfMsgBox, Yes			  	
+				Process, Close, %pID%
+				hWndCount--		  	
+			}
 		}			
 	}	
 	Return
@@ -555,10 +555,10 @@ CloseAll(hWnd) {
 		    this_id := hWndArray%A_Index%
 		    WinGet, pID, PID, ahk_id %this_id%
 		    Process, Exist, pID
-			  if !ErrorLevel {		
-			  	Process, Close, %pID%
-			  	hWndCount--
-				}
+			if !ErrorLevel {		
+				Process, Close, %pID%
+				hWndCount--
+			}
 		}
 	}	
 	Return
@@ -574,9 +574,9 @@ SetProcessLevel(pLevel,hWnd) {
 		    this_id := hWndArray%A_Index%
 		    WinGet, pID, PID, ahk_id %this_id%
 		    Process, Exist, pID
-			  if !ErrorLevel {
-					Process, Priority, %pID%, %pLevel%
-				}
+			if !ErrorLevel {
+				Process, Priority, %pID%, %pLevel%
+			}
 		}
 	}
 	Return
@@ -734,13 +734,13 @@ TweakWindow(hWnd,tweakLimit=0)
 	;MsgBox, hWnd: %hWnd%
 	if WinExist(hWnd) {
 	  	BlockInput On    	
-			WinActivate, %hWnd%
-			WinWaitActive, %hWnd%,,3
-			if (ErrorLevel != 0)
-			{
-			    MsgBox, WinWait timed out.
-			    Return
-			}
+		WinActivate, %hWnd%
+		WinWaitActive, %hWnd%,,3
+		if (ErrorLevel != 0)
+		{
+			MsgBox, WinWait timed out.
+			Return
+		}
 	  	BlockInput On		
 	    WinGet Style, Style, %hWnd%
 	    ; 0xC40000 = WS_BORDER (0x800000) + WS_DLGFRAME (0x400000) + WS_SIZEBOX aka WS_THICKFRAME (0x040000)
