@@ -752,8 +752,8 @@ TweakWindow(hWnd,tweakLimit=0)
 	    } else {
 	    	if(tweakLimit = 0)	
 	    	{
-	        WinSet, Style, +0xC40000, %hWnd%
-	        ; Note: will set WS_SIZEBOX even if not previously present
+	        	WinSet, Style, +0xC40000, %hWnd%
+	        	; Note: will set WS_SIZEBOX even if not previously present
 	        if(Width > w - w_wasted) {
 	            Width := %w%-%w_wasted%
 	        }
