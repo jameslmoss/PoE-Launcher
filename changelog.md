@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+## [1.0.3a] - 2021-9-19
+### Added:
+- config.ini section for Window the default tweakWindowWidth and tweakWindowHeight values
+- GetWindowConfig(): loads the default tweakWindowWidth and tweakWindowHeight values
+    - GetWindowConfig() is called anytime you activate the TweakWindow function so you can edit config.ini and emediately see your changes.
+    
 ## [1.0.3] - 2021-9-17
 ### Change:
 - the quickLinks array and function GetQuickLinksArray handles the array objects more as a proper array instead of a psuedo array now.
