@@ -1,5 +1,5 @@
 #  PoE Launcher
-*  Version: 1.0.3
+*  Version: 1.0.3a
 *  [Download](https://github.com/jameslmoss/PoE-Launcher/releases/latest "Download") the latest version
 
 PoE Launcher was born because I got tired of manually setting the process priority of Path of Exile to Above Normal. So I descided to automate that task with a [autohotkey](https://www.autohotkey.com) script.
