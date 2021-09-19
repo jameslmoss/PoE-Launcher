@@ -44,15 +44,15 @@ To try it copy the folder/files replace the icons as needed, and edit config.ini
 You'll need to edit the paths and will require a program like [**winspy**](http://www.catch22.net/software/winspy) to help you find the **windowTitle** and **windowClass** values.
 
 ## PoE Launcher Menu, QuickLinks
-![Alt text](https://i.imgur.com/i1xarZw.png "TrayIcon Menu, QuickLinks")
+![PoE Launcher Menu, QuickLinks](https://i.imgur.com/i1xarZw.png "PoE Launcher Menu, QuickLinks")
 
 ## PoE Launcher Menu, Set Process Level
-![Alt text](https://i.imgur.com/SZvFB0S.png "PoE Launcher Menu, Set Process Level")
+![PoE Launcher Menu, Set Process Level](https://i.imgur.com/SZvFB0S.png "PoE Launcher Menu, Set Process Level")
 
 ## PoE Launcher Menu, Settings
-![Alt text](https://i.imgur.com/LGMXBss.png "PoE Launcher Menu, Settings")
+![PoE Launcher Menu, Settings](https://i.imgur.com/LGMXBss.png "PoE Launcher Menu, Settings")
 
-## Video walk through
+## Watch a video walk through on youtube
 [![Watch on youtube](https://img.youtube.com/vi/7bmw5uZb50o/maxresdefault.jpg)](https://youtu.be/7bmw5uZb50oA)
 
 ## Credits:
