@@ -508,7 +508,7 @@ Launch(hWnd) {
 					if !ErrorLevel {
 				    if(setResOnStart) {
 						GetWindowConfig()
-				    	TweakWindow("ahk_id " this_id,1)
+						TweakWindow("ahk_id " this_id,1)
 				    }			
 				    if(setLevelOnStart) {
 							;MsgBox, Set Level - Window Id: %this_id%				    	
