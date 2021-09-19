@@ -745,23 +745,23 @@ TweakWindow(hWnd,tweakLimit=0)
 	    WinGet Style, Style, %hWnd%
 	    ; 0xC40000 = WS_BORDER (0x800000) + WS_DLGFRAME (0x400000) + WS_SIZEBOX aka WS_THICKFRAME (0x040000)
 	    if(Style & 0xC00000) { ; if has WS_CAPTION. Ignore sizebox value.
-	      WinGetPos, X, Y, Width, Height, %hWnd%
-	      WinSet, Style, -0xC40000, %hWnd% ; removes attributes, including sizebox...doesn't do a strict subtraction
-	      WinMove,%hWnd%,,0,0,w,h     
-	      ;MsgBox, One
+	    	WinGetPos, X, Y, Width, Height, %hWnd%
+	    	WinSet, Style, -0xC40000, %hWnd% ; removes attributes, including sizebox...doesn't do a strict subtraction
+	    	WinMove,%hWnd%,,0,0,w,h     
+	    	;MsgBox, One
 	    } else {
 	    	if(tweakLimit = 0)	
 	    	{
 	        	WinSet, Style, +0xC40000, %hWnd%
 	        	; Note: will set WS_SIZEBOX even if not previously present
-	        if(Width > w - w_wasted) {
-	            Width := %w%-%w_wasted%
-	        }
-	        if(Height > h - h_wasted) {
-	            Height := %h%-%h_wasted%
-	        }
-	        WinMove,%hWnd%,,%X%,%Y%,%Width%,%Height%      
-					;MsgBox, Two	      		
+	        	if(Width > w - w_wasted) {
+	            	Width := %w%-%w_wasted%
+	        	}
+	        	if(Height > h - h_wasted) {
+	           	Height := %h%-%h_wasted%
+	        	}
+	        	WinMove,%hWnd%,,%X%,%Y%,%Width%,%Height%      
+				;MsgBox, Two	      		
 	    	}
 	    }
 	    WinSet, Redraw,,%hWnd%
