@@ -51,6 +51,11 @@ IniRead, windowTitle, %INI_FILE%, Paths, windowTitle, "Path of Exile"
 global windowClass := "POEWindowClass"
 IniRead, windowClass, %INI_FILE%, Paths, windowClass, "POEWindowClass"
 
+; TweakWindow width and Height
+global tweakWindowWidth := "1920"
+global tweakWindowHeight := "1030"
+GetWindowConfig()
+
 ; Internal variable
 ;global loadDelay := 3500 ; Play with this value
 global hWndCount := 0
@@ -192,7 +197,8 @@ TrayMenu:
 	
 	If (A_ThisMenuItem="&TweakWindow") {
 		if(notifyShow)
-			Notify(launcherTitle " Launcher","Tweaking: " windowTitle, 1,"Style=Mine TS=12 MS=12")			
+			Notify(launcherTitle " Launcher","Tweaking: " windowTitle, 1,"Style=Mine TS=12 MS=12")	
+		GetWindowConfig()
 		TweakWindow("ahk_class " windowClass)
 		Return
 	}
@@ -368,6 +374,7 @@ Return
 F10::
 	if (WinActive("ahk_class " windowClass))
 	{
+		GetWindowConfig()
 		TweakWindow("ahk_class " windowClass)
 	} else {
 		SendInput {F10}
@@ -500,6 +507,7 @@ Launch(hWnd) {
 			  	Process, Exist, pID
 					if !ErrorLevel {
 				    if(setResOnStart) {
+						GetWindowConfig()
 				    	TweakWindow("ahk_id " this_id,1)
 				    }			
 				    if(setLevelOnStart) {
@@ -655,7 +663,18 @@ WriteConfig() {
 	IniWrite, %windowTitle%, %INI_FILE%, Paths, windowTitle
 	IniWrite, %windowClass%, %INI_FILE%, Paths, windowClass
 
+	; Section Window
+	IniWrite, %tweakWindowWidth%, %INI_FILE%, Window, tweakWindowWidth
+	IniWrite, %tweakWindowHeight%, %INI_FILE%, Window, tweakWindowHeight
+	
 	Return
+}
+
+GetWindowConfig()
+{
+	IniRead, tweakWindowWidth, %INI_FILE%, Window, tweakWindowWidth, "1920"
+	IniRead, tweakWindowHeight, %INI_FILE%, Window, tweakWindowHeight, "1030"	
+	;Notify(launcherTitle " Launcher","GetWeakWindowConfig()`nWidth: " tweakWindowWidth "`nHeight:" tweakWindowHeight, 1,"Style=Mine TS=12 MS=12")		
 }
 
 GetProcessCount(hWnd) {
@@ -701,8 +720,10 @@ ClearArray(ArrayName) ;needs explicit "" for "ArrayName"
 TweakWindow(hWnd,tweakLimit=0)
 {
 	; Window width and  height Settings edit carefully
-	w = 1920
-	h = 1030
+	;w = 1920
+	;h = 1030
+	w := tweakWindowWidth
+	h := tweakWindowHeight
 	w_wasted = 6 ; width used by resize bars
 	h_wasted = 29 ; width used by caption frame and resize bars	
 	
