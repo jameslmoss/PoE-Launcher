@@ -18,7 +18,7 @@ It also can load links to files from a QuickLinks folder for easy access to ofte
 ## Settings Menu Options: 
 - AutoLoad the target program on Startup (checked=on, unchecked=off)
 - AutoClose the target program on Exit (checked=on, unchecked=off)
-- AutoSet Process Level on Startup of the target program on Startup (checked=on, unchecked=off)
+- AutoSet the target program process level on Startup (checked=on, unchecked=off)
 - AutoTweak the target program window on Startup (checked=on, unchecked=off)
 
 ## Hidden features and Hotkeys:
@@ -34,6 +34,7 @@ It also can load links to files from a QuickLinks folder for easy access to ofte
 - loadDelay=3500
     - is the delay after runing the client before attempting to do other actions such as "TweakWindow"
         - if TweakWindow on start is not working properly adjust this value (usually increase it).
+- Both tweakWindowWidth=1920 and tweakWindowHeight=1030 can be edited/saved and the new values be used in the TweakWindow() functionality.
 
 By default everything is turned off if you run the app and click on a menu item, it will trigger the action and save any potential settings. If a menu item is checked/bold that means it is on/active other wise it is off/disabled.
 
