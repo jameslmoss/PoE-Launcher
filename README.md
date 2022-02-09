@@ -2,8 +2,9 @@
 *  Version: 1.0.3a
 *  [Download](https://github.com/jameslmoss/PoE-Launcher/releases/latest "Download") the latest version
 
-PoE Launcher was born because I got tired of manually setting the process priority of Path of Exile to Above Normal. So I descided to automate that task with a [autohotkey](https://www.autohotkey.com) script.
-PoE Launcher can automate launching, closing and tweaking the client window. 
+PoE Launcher is similar to a program shortcut but with extra abilities.
+It's written using [autohotkey](https://www.autohotkey.com)
+PoE Launcher can automate launching, closing and tweaking the client program window. 
 It also can load links to files from a QuickLinks folder into a menu for easy access to often used tools. 
 
 ## Menu Functionality
