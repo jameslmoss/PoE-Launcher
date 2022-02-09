@@ -3,7 +3,6 @@
 *  [Download](https://github.com/jameslmoss/PoE-Launcher/releases/latest "Download") the latest version
 
 PoE Launcher is similar to a program shortcut but with extra abilities.
-It's written using [autohotkey](https://www.autohotkey.com)
 PoE Launcher can automate launching, closing and tweaking the client program window. 
 It also can load links to files from a QuickLinks folder into a menu for easy access to often used tools. 
 
